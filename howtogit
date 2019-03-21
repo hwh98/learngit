@@ -6,15 +6,26 @@ https://www.jianshu.com/p/7edb6b838a2e
 	git clone https://github.com/hwh98/learngit.git#你複製的
 3.success
 
+
+
+
+
 //更新檔案到git
 1.	切換到連結到git 的資料夾	-> cd /Users/hongweishiung/Desktop/learngit
 2.	get commit . 
 	##注意那個點要有空格，但強烈不推薦這樣的作法，這樣的方法雖然方便但很容易會不小心加入一些	其他不必要的	檔案，一個正確的觀念是你必須隨時都很清楚你的檔案狀態，因此最好是手動將你確定要加入的檔案使用 		git add 來加入，有一個更好的作法是使用互動模式 git add -i ，在互動模式下你可以方便的選擇你要加入的	檔案，或是移除剛剛不小心加入的檔案 (revert)。
 
 3.	get commit -m "FIrst commit"
-	##一個 commit 在 Git 中就是一個節點，這些 commit 的節點就是未來你可以回朔及追蹤的參考，讓我們未來	在需要的時候都可以回到這些存檔時的狀態。
+	##一個 commit 在 Git 中就是一個節點，這些 commit 的節點就是未來你可以回朔及追蹤的參考，讓我們未來	在需要的時候都可以回到這些存檔時的狀態。所以後面這串是指你對這個版本的名稱。寫下你這次 commit 的訊息，	例如在這裡寫下 “Add test.rb file to test git function”來表示這一次提交的目的，強烈建議在 		commit 的時候要盡量清楚表達這次 commit 的內容為何，因為這會讓你未來要回頭看 code 的時候能讓你快速	的找到你想要找的內容，也能對團隊中其他成員了解你在做什麼。
+
 4.	git push 
-5.success
+5.	success
+
+
+
+
+
+
 
 //現有已經開發專案 使用git管理
 1.	終端機切換到該專案資料夾中
