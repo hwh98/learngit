@@ -1,0 +1,6 @@
+1. 創建一個respo
+2. 點選clone and downloads複製專案裡面的clone with HTTPS 複製。
+	切換到電腦終端機，移動到你要新增資料夾的地方，然後輸入
+	git clone https://github.com/hwh98/learngit.git#你複製的
+3.success
+
