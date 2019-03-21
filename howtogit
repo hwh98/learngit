@@ -21,16 +21,54 @@ https://www.jianshu.com/p/7edb6b838a2e
 4.	git push 
 5.	success
 
+@@@commit message不是一行字時:git commit (會進入文字編輯器Vi！：在第一行輸入文字後，按下esc接著會跳到最下面一行並且輸入:wq)
+	: 代表接下來為指令
+	w 代表寫入 = 儲存
+	q 代表離開程式
+	!  代表強制執行 ，有時候因為一些因素導致安全機制不讓你寫入。
 
 
-
-
+//更改commit 結果
 
 
 //現有已經開發專案 使用git管理
 1.	終端機切換到該專案資料夾中
 2.	->git init
 3.	終端會顯示 Initialized empty Git repository in /Users/Jimmy/Projects/Animal/.git/
-	
 4.	success
 
+
+//一些git
+git status:來檢查目前 Git 的狀態，看有沒有Untracked file /changed to be committe
+	Untracked file :完全新的檔案，
+git -v ##會列出更動的紀錄：
+	加號(+)代表增加的部份，減號(–)代表刪除的部份。
+git log ##查看過去更動紀錄
+可以使用 git log —stat 參數看到更詳盡的訊息，更詳細的變更內容，你可以加上 -p(git log -p) 的參數：
+
+
+//git command message的規則（當然現階段來說並不會到很重要，因為我們開發的專案不是到非常大，但養成一個好習		觀、擁有一個好的觀念是很重要，就像是註解你的程式碼）：
+	https://blog.louie.lu2017/03/21/%E5%A6%82%E4%BD%95%E5%AF%AB%E4%B8%80%E5%80%8B-git-	commit-message/
+	重新了解一段程式碼更動的脈絡很浪費腦力。雖然這件事情沒辦法完全避免，但是我們可以盡量降低這件事情的複雜	度。Commit messages 正可以做到這點，而我們可以從 commit message 看出一個開發者是不是一位好的合	作對象。
+	-風格. Markup syntax，wrap margins，文法，大寫慣例，符號慣例。定義這些事情，不要用猜的，並且讓它	愈簡單愈好。最後的結果會得到一個非常一致的 log，不僅在閱讀時是一種享受，更重要的是人們真的會經常性的去	讀它們。
+	-內容. 什麼樣的資訊需要放置在 commit message body 中？什麼不需要？
+	-Metadata. issue tracking IDs, pull request 號碼等等的資料該如何被參照？
+規則：	
+	1.用一行空白行分隔標題與內容
+	2.限制標題最多只有 50 字元
+	3.標題開頭要大寫
+	4.標題不以句點結尾
+	5.以祈使句撰寫標題
+	6.內文每行最多 72 字
+	7.用內文解釋 what 以及 why vs. how
+	
+	git commit -m “xxxx”只能攥寫該版本標題
+	用git commit 就可以攥寫標題內文
+
+
+
+//遇到的error
+
+1.	Updates were rejected because the tip of your current branch is behind
+	網路上的版本比你現在電腦的版本還要新！可能是因為有個人也同時在打code他比你早先推上去
+		%%however,你也可以忽視這個使用 git push -f(force)強迫把自己的推上去把網路上的新版本蓋	掉，但不太建議
