@@ -21,11 +21,13 @@ https://www.jianshu.com/p/7edb6b838a2e
 4.	git push 
 5.	success
 
-@@@commit message不是一行字時:git commit (會進入文字編輯器Vi！：在第一行輸入文字後，按下esc接著會跳到最下面一行並且輸入:wq)
+@@@commit message不是一行字時:git commit (會進入文字編輯器Vi！：按下crtl+x輸入，在第一行輸入文字後，按下esc接著會跳到最下面一行並且輸入:wq)
 	: 代表接下來為指令
 	w 代表寫入 = 儲存
 	q 代表離開程式
 	!  代表強制執行 ，有時候因為一些因素導致安全機制不讓你寫入。
+@@@:每次更動一個資料夾中檔案，使用git commit 紀錄版本，會把該版本的message覆寫到該資料夾中每個檔案。因此要記錄某個特定版本的時候要記得git commit [file]去填寫版本message
+
 
 
 //更改commit 結果
@@ -40,7 +42,8 @@ https://www.jianshu.com/p/7edb6b838a2e
 
 //一些git
 git status:來檢查目前 Git 的狀態，看有沒有Untracked file /changed to be committe
-	Untracked file :完全新的檔案，
+	Untracked file :完全新的檔案
+	Changes not staged for commit:已經有被git add進去追蹤了，但是有被更改過等等....，正在等待被提	交至遠端數據庫
 git -v ##會列出更動的紀錄：
 	加號(+)代表增加的部份，減號(–)代表刪除的部份。
 git log ##查看過去更動紀錄
