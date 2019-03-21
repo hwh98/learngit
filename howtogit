@@ -12,3 +12,11 @@ https://www.jianshu.com/p/7edb6b838a2e
 3.	get commit -m "FIrst commit"
 4.	git push 
 5.success
+
+//現有已經開發專案 使用git管理
+1.	終端機切換到該專案資料夾中
+2.	->git init
+3.	終端會顯示 Initialized empty Git repository in /Users/Jimmy/Projects/Animal/.git/
+	
+4.	success
+
