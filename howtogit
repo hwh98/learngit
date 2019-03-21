@@ -26,7 +26,7 @@ https://www.jianshu.com/p/7edb6b838a2e
 	w 代表寫入 = 儲存
 	q 代表離開程式
 	!  代表強制執行 ，有時候因為一些因素導致安全機制不讓你寫入。
-@@@:每次更動一個資料夾中檔案，使用git commit 紀錄版本，會把該版本的message覆寫到該資料夾中每個檔案。因此要記錄某個特定版本的時候要記得git commit [file]去填寫版本message
+@@@:每次更動一個資料夾中檔案，使用git commit 紀錄版本，會把該版本的message覆寫到該資料夾中每個檔案。因此要記錄某個特定版本的時候要記得git commit [file]去填寫版本message。如果使用git commit 他會說no changes added to commit。
 
 
 
